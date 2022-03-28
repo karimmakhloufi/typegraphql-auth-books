@@ -2,8 +2,7 @@ import bcrypt from "bcrypt";
 import { Resolver, Query, Arg } from "type-graphql";
 import { ApolloError } from "apollo-server";
 import jwt from "jsonwebtoken";
-
-const jwtKey = "my_secret_key_that_must_be_very_long";
+import { jwtKey } from "../../server";
 
 const usersDB = [
   {
