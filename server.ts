@@ -2,11 +2,12 @@ import "reflect-metadata";
 import { ApolloServer } from "apollo-server";
 import { buildSchema } from "type-graphql";
 import { BookResolver } from "./src/Resolvers/Book";
+import { LoginResolver } from "./src/Resolvers/Login";
 
 async function bootstrap() {
   // build TypeGraphQL executable schema
   const schema = await buildSchema({
-    resolvers: [BookResolver],
+    resolvers: [BookResolver, LoginResolver],
   });
 
   // Create GraphQL server
